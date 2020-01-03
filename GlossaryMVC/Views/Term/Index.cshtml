@@ -1,0 +1,51 @@
+﻿@model IEnumerable<GlossaryMVC.Models.mvcTermModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+
+<p>
+    <a class="btn btn-success" href="@Url.Action("AddOrEdit", "Term")"><i class="fa fa-plus"></i>New Glossary Term</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Term
+            </th>
+            <th>
+                Definition
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    @{ 
+        List<GlossaryMVC.Models.mvcTermModel> sortedGlossary = new List<GlossaryMVC.Models.mvcTermModel>();
+        sortedGlossary = Model.OrderBy(o=>o.TermName).ToList();
+
+        foreach (var item in sortedGlossary)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TermName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TermDefinition)
+            </td>
+            <td>
+                <a href="@Url.Action("AddOrEdit", "Term", new { id = item.TermID })" class="btn btn-primary"><i class="fa fa-pencil"></i>Edit</a>
+                <a onclick="Delete(@item.TermID)" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</a>
+            </td>
+        </tr>
+            }
+        }
+</table>
+
+@section scripts {
+    <script>
+        function Delete(id) {
+            window.location.href = '@Url.Action("Delete","term")/' + id;
+        }
+    </script>
+}

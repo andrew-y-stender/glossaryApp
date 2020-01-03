@@ -1,0 +1,34 @@
+﻿@model GlossaryMVC.Models.mvcTermModel
+@{
+    ViewBag.Title = "AddOrEdit";
+}
+<div class="card" id="addCard">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.TermID)
+
+        <div class="form-group">
+            Term
+            @Html.LabelFor(model => model.TermName)
+            @Html.EditorFor(model => model.TermName)
+            @Html.ValidationMessageFor(model => model.TermName)
+        </div>
+
+        <div class="form-group">
+            Definition
+            @Html.LabelFor(model => model.TermDefinition)
+            @Html.EditorFor(model => model.TermDefinition)
+            @Html.ValidationMessageFor(model => model.TermDefinition)
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Submit" />
+            @*<input class="btn btn-danger" type="reset" value="Reset" />*@
+        </div>
+
+    }
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+    }

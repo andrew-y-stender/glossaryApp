@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlossaryWebApi", "GlossaryWebApi\GlossaryWebApi.csproj", "{BB0C517B-BCDE-4069-9CBA-ECFE64978043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlossaryMVC", "GlossaryMVC\GlossaryMVC.csproj", "{EF27109B-C3CD-4B3F-BBF0-C48ABFA20B19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB0C517B-BCDE-4069-9CBA-ECFE64978043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0C517B-BCDE-4069-9CBA-ECFE64978043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0C517B-BCDE-4069-9CBA-ECFE64978043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0C517B-BCDE-4069-9CBA-ECFE64978043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF27109B-C3CD-4B3F-BBF0-C48ABFA20B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF27109B-C3CD-4B3F-BBF0-C48ABFA20B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF27109B-C3CD-4B3F-BBF0-C48ABFA20B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF27109B-C3CD-4B3F-BBF0-C48ABFA20B19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EE97356-AC5D-4700-9ACE-1D03D0753573}
+	EndGlobalSection
+EndGlobal
